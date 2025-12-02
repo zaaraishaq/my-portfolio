@@ -214,7 +214,7 @@
                                 <span className="font-semibold text-slate-900"> machine learning</span> to solve global health challenges.
                             </p>
                             <p className="text-xs text-slate-400 font-mono font-medium mb-8 uppercase tracking-widest flex flex-wrap justify-center md:justify-start gap-3">
-                                <span>Researcher</span> • <span>Reader</span>  • <span>Writer</span> • <span>Photographer</span> • <span>Observer</span> • <span>Traveller</span>
+                                <span>Reader</span> • <span>Writer</span> • <span>Photographer</span> • <span>Observer</span> • <span>Traveller</span>
                             </p>
                             <div className="flex flex-wrap justify-center md:justify-start gap-3">
                                 <button onClick={() => setActiveTab('research')} className="px-6 py-2.5 bg-slate-900 text-white rounded-full font-medium hover:bg-slate-800 transition-all flex items-center gap-2">
@@ -244,6 +244,18 @@
                             <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">{stat.label}</p>
                         </div>
                     ))}
+                </div>
+
+                {/* Memberships Section (Moved from Community) */}
+                <div className="bg-white p-8 rounded-[2rem] border border-slate-200">
+                    <h3 className="font-bold text-lg mb-6 flex items-center gap-2">
+                        <Users size={20} className="text-lime-500" /> Memberships
+                    </h3>
+                    <div className="flex flex-wrap gap-3">
+                        {[{name: "ISCB", link: "https://www.iscb.org/"}, {name: "ASM", link: "https://asm.org/"}, {name: "BactiVac Network", link: "https://www.birmingham.ac.uk/research/immunology-immunotherapy/research/bactivac"}, {name: "AFOB", link: "https://www.afob.org/"}].map(m => (
+                            <a key={m.name} href={m.link} target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-slate-50 rounded-xl border border-slate-200 text-sm font-medium text-slate-700 hover:border-lime-500 hover:text-lime-600 transition-colors cursor-pointer no-underline">{m.name}</a>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Connect Section */}
@@ -452,7 +464,7 @@
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
                         <h2 className="text-3xl font-bold text-slate-900 mb-2">Publications</h2>
-                        <p className="text-slate-500">List of research outputs including journal articles and book chapters.</p>
+                        <p className="text-slate-500">A list of research outputs including journal articles and book chapters.</p>
                     </div>
                     <a 
                         href="https://scholar.google.com/citations?user=JNqnyk0AAAAJ&hl=en" 
@@ -594,14 +606,6 @@
                                     <Award size={18} className="text-lime-400" />
                                     <span className="text-sm">Sports Gala '23 Participant</span>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/10">
-                            <h4 className="font-bold mb-4 text-lime-400">Memberships</h4>
-                            <div className="flex flex-wrap gap-2">
-                                {[{name: "ISCB", link: "https://www.iscb.org/"}, {name: "ASM", link: "https://asm.org/"}, {name: "BactiVac Network", link: "https://www.birmingham.ac.uk/research/immunology-immunotherapy/research/bactivac"}, {name: "AFOB", link: "https://www.afob.org/"}].map(m => (
-                                    <a key={m.name} href={m.link} target="_blank" rel="noopener noreferrer" className="px-3 py-1 bg-white/20 rounded-full text-xs hover:bg-lime-500 transition-colors cursor-pointer text-white no-underline">{m.name}</a>
-                                ))}
                             </div>
                         </div>
                     </div>
