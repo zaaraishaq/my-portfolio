@@ -402,7 +402,7 @@
                         </div>
                         <h3 className="text-xl font-bold text-slate-900 mb-3">Genomic Epidemiology</h3>
                         <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                            Tracking multi-drug resistant bacterial strains like <i className="font-serif text-slate-800">Escherichia coli</i> and <i className="font-serif text-slate-800">Salmonella Typhi</i> using Whole-genome sequencing (WGS).
+                            Tracking multi-drug resistant bacterial strains like <i className="font-serif text-slate-800">escherichia coli</i> and <i className="font-serif text-slate-800">Salmonella Typhi</i> using Whole-genome sequencing (WGS).
                         </p>
                         <ul className="text-xs text-slate-500 space-y-2 list-disc pl-4">
                             <li>WGS Analysis</li>
@@ -436,7 +436,7 @@
                             <div>
                                 <h3 className="text-xl font-bold text-slate-900 mb-3">AI in Microbiology</h3>
                                 <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                                    Developing machine learning models to combat antibiotic resistance and predict vaccine antigens. My work includes the development of <b>VacSol-ML</b> and <b>B-vac</b>.
+                                    Developing machine learning models to combat antibiotic resistance and predict vaccine antigens. My work includes: <b>VacSol-ML</b> and <b>Bvac</b>.
                                 </p>
                                 <div className="flex flex-wrap gap-2">
                                     <span className="px-3 py-1 bg-slate-100 rounded-full text-xs font-bold text-slate-600">Python</span>
@@ -616,16 +616,33 @@
                                 </div>
                             </div>
                         </div>
-                        <div className="relative h-64 md:h-full min-h-[250px] rounded-2xl overflow-hidden group">
-                            <img 
-                                src="./images.jpg" 
-                                alt="NUST Lake Photography" 
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                                <p className="text-white text-xs font-medium flex items-center gap-2">
-                                    <Camera size={14} /> Captured by Zaara
-                                </p>
+                        <div className="grid grid-cols-2 gap-4">
+                            {/* Lake Photo */}
+                            <div className="relative h-48 md:h-64 rounded-2xl overflow-hidden group">
+                                <img 
+                                    src="./images.jpg" 
+                                    alt="NUST Lake Photography" 
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                                    <p className="text-white text-[10px] font-medium flex items-center gap-2">
+                                        <Camera size={14} /> Photography
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Logo Design */}
+                            <div className="relative h-48 md:h-64 rounded-2xl overflow-hidden group bg-white p-4 flex items-center justify-center">
+                                <img 
+                                    src="./asab_logo.jpg" 
+                                    alt="ASAB Logo Design" 
+                                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <p className="text-white text-[10px] font-medium flex items-center gap-2">
+                                        <Palette size={14} /> Logo Design
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
